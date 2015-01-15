@@ -1,0 +1,15 @@
+2015-01-13 22:37:11.325 mainevent[13427:310237] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/jonathongray/Library/Developer/CoreSimulator/Devices/8D31CD1F-7431-4FC2-BAE9-67B8CE878D69/data/Containers/Data/Application/59093D8D-9069-4FB1-B97A-C229F1123704/Library/Cookies/Cookies.binarycookies
+2015-01-13 22:37:11.428 mainevent[13427:310237] Multi-tasking -> Device: YES, App: YES
+2015-01-13 22:37:11.448 mainevent[13427:310237] Unlimited access to network resources
+2015-01-13 22:37:11.800 mainevent[13427:310237] [CDVTimer][keyboard] 0.066996ms
+2015-01-13 22:37:11.803 mainevent[13427:310237] [CDVTimer][file] 3.000021ms
+2015-01-13 22:37:11.804 mainevent[13427:310237] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2015-01-13 22:37:11.804 mainevent[13427:310237] [CDVTimer][statusbar] 0.104964ms
+2015-01-13 22:37:11.804 mainevent[13427:310237] [CDVTimer][TotalPluginStartup] 3.573000ms
+2015-01-13 22:37:12.624 mainevent[13427:310237] Resetting plugins due to page load.
+2015-01-13 22:37:12.837 mainevent[13427:310237] Finished load of: file:///Users/jonathongray/Library/Developer/CoreSimulator/Devices/8D31CD1F-7431-4FC2-BAE9-67B8CE878D69/data/Containers/Bundle/Application/59B0E076-7D63-4356-8891-083CFEE86965/mainevent.app/www/index.html#/tab/dash
+2015-01-13 22:37:17.288 mainevent[13427:310237] detail controller
+2015-01-13 22:37:17.289 mainevent[13427:310237] {"id":0,"name":"Fire Inside","stream":"01_Fire_Inside.mp3","download":"01_Fire_Inside.m4a","$$hashKey":"00N"}
+2015-01-13 22:37:17.289 mainevent[13427:310237] detail controller
+2015-01-13 22:37:17.289 mainevent[13427:310237] {"id":0,"name":"Fire Inside","stream":"01_Fire_Inside.mp3","download":"01_Fire_Inside.m4a","$$hashKey":"00N"}
+2015-01-13 22:45:46.600 mainevent[13427:318236] Terminating since there is no system app.

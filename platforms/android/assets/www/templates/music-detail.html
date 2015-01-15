@@ -1,0 +1,40 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+
+<ion-view title="{{music.name}}">
+  <ion-content has-header="true" padding="true">
+
+  </ion-content>
+</ion-view>-->
+
+<ion-view ng-controller="MusicDetailCtrl">
+	<ion-content has-header="false" padding="true">
+		<div class="list card">
+
+		  <div class="item item-avatar">
+		    <img src="img/ionic.png">
+		    <h2>{{music.name}}</h2>
+		    <p>November 05, 1955</p>
+		  </div>
+
+		  <div class="item tabs tabs-secondary tabs-icon-left">
+		    <a class="tab-item" ng-click="play(music.url)">
+		      <i class="icon {{musicIcon}}"></i>
+		      {{musicIconText}}
+		    </a>
+		    <a class="tab-item" href="#" ng-click="sendDownloadLink()">
+		      <i class="icon ion-ios7-cloud-download"></i>
+		      Download
+		    </a>
+		    <a class="tab-item" href="https://twitter.com/intent/tweet?url=http://itunes.com&text=Checkout the main event app&original_referer=https://itunes.apple.com/us/app/mainevent/idmaineventappidhere?mt=8">
+		      <i class="icon ion-share"></i>
+		      Share
+		    </a>
+		  </div>
+
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+
+//label aligned input
+.item-input{
+	.input-label {
+		+ input {
+			text-align: right;
+			margin-right: 10px;
+		}
+	}
+}
+
+
+.item-input-wrapper{
+	.placeholder-icon{
+		color: $input-color-placeholder;
+	}
+}

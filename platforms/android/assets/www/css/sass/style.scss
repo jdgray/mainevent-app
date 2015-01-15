@@ -1,0 +1,15 @@
+@import 'variables.scss';
+
+//Base
+@import 'ionic/ionic.scss';
+@import 'base.scss';
+@import 'animate.scss';
+@import 'grid-extension.scss';
+
+//Components
+@import 'buttons.scss';
+@import 'forms.scss';
+@import 'lists.scss';
+@import 'headers.scss';
+@import 'modals/more-info.scss';
+@import 'modals/notes.scss';

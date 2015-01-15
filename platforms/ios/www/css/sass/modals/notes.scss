@@ -1,0 +1,35 @@
+.note-nav-animation {
+	opacity: 1;
+	position: absolute;
+}
+
+.note-nav-animation.ng-hide {
+	opacity: 0;
+}
+
+.note-nav-animation.ng-hide-add { 
+	opacity: 0;
+}
+.note-nav-animation.ng-hide-add.ng-hide-add-active {
+	opacity: 0;
+	
+}
+.note-nav-animation.ng-hide-remove { 
+	@include transition(all .5s linear);
+}
+.note-nav-animation.ng-hide-remove.ng-hide-remove-active { 
+	@include transition(all .5s linear);
+}
+
+.new-note{
+	background: white;
+	
+	.note-title {
+		color: black;
+	}
+}
+.note-input{
+	color: black;
+	resize: none;
+	min-height: 200px;
+}

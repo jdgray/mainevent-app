@@ -1,0 +1,581 @@
+/*
+
+Many of these styles are used to compile ionic styles too DO NOT rename vars
+
+default is what is used to compile. defualt should reference light, dark, or custom. Changes should only be made in light dark and custom then passed to default. 
+
+
+Colors are all considered custom. 
+
+
+Only minor changes should be made to ionic/ folder scss files
+
+
+
+*/
+
+@mixin transition($transition-property, $transition-time, $method) {
+    -webkit-transition: $transition-property $transition-time $method;
+    -moz-transition: $transition-property $transition-time $method;
+    -ms-transition: $transition-property $transition-time $method;
+    -o-transition: $transition-property $transition-time $method;
+    transition: $transition-property $transition-time $method;
+}
+
+//Icon path
+$ionicons-font-path: "../lib/ionic/fonts/" !default;
+
+
+// Colors
+// -------------------------------
+
+$light:                           #fff !default;
+$dark:                            #444 !default;
+$medium:                          #444 !default;
+
+
+
+
+// Base
+// -------------------------------
+
+$font-family-sans-serif:          "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
+$font-family-light-sans-serif:    "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !default;
+$font-family-serif:               Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:           Monaco, Menlo, Consolas, "Courier New", monospace !default;
+
+$font-family-base:                $font-family-sans-serif !default;
+$font-size-base:                  14px !default;
+$font-size-large:                 18px !default;
+$font-size-small:                 11px !default;
+
+$line-height-base:                1.428571429 !default; // 20/14
+$line-height-computed:            floor($font-size-base * $line-height-base) !default; // ~20px
+$line-height-large:               1.33 !default;
+$line-height-small:               1.5 !default;
+
+$headings-font-family:            $font-family-base !default;
+$headings-font-weight:            500 !default;
+$headings-line-height:            1.2 !default;
+
+$base-background-color:           #292a2b !default;
+$base-color:                      #fff !default;
+
+$link-color:                      #8d8d8d !default;
+$link-hover-color:                darken($link-color, 15%) !default;
+
+$content-padding:                 10px !default;
+
+$padding-base-vertical:           6px !default;
+$padding-base-horizontal:         12px !default;
+
+$padding-large-vertical:          10px !default;
+$padding-large-horizontal:        16px !default;
+
+$padding-small-vertical:          5px !default;
+$padding-small-horizontal:        10px !default;
+
+$border-radius-base:              4px !default;
+$border-radius-large:             6px !default;
+$border-radius-small:             3px !default;
+
+//Base font size for reading, all other fonts sizes are children
+$base-p: 20px !default;
+$base-lineheight-p: 36px !default;
+
+$base-h1: 36px !default;
+$base-lineheight-h1: 48px !default;
+
+$base-h2: 22px !default;
+$base-lineheight-h2: 35px !default;
+
+$base-h3: 14px !default;
+$base-lineheight-h3: 1 !default;
+
+$base-h4: 14px !default;
+$base-lineheight-h4: 1 !default;
+
+$base-h5: 14px !default;
+$base-lineheight-h5: 1 !default;
+
+$base-list: 16px !default;
+$base-lineheight-list: 1 !default;
+
+
+// Content
+// -------------------------------
+
+$scroll-refresh-icon-color:       #666666 !default;
+
+
+// Buttons
+// -------------------------------
+
+$button-color:                    #222 !default;
+$button-block-margin:             10px !default;
+$button-clear-padding:            6px !default;
+$button-border-radius:            2px !default;
+$button-border-width:             1px !default;
+
+$button-font-size:                16px !default;
+$button-height:                   42px !default;
+$button-padding:                  12px !default;
+$button-icon-size:                24px !default;
+
+$button-large-font-size:          20px !default;
+$button-large-height:             54px !default;
+$button-large-padding:            16px !default;
+$button-large-icon-size:          32px !default;
+
+$button-small-font-size:          12px !default;
+$button-small-height:             28px !default;
+$button-small-padding:            4px !default;
+$button-small-icon-size:          16px !default;
+
+$button-bar-button-font-size:     13px !default;
+$button-bar-button-height:        32px !default;
+$button-bar-button-padding:       8px !default;
+$button-bar-button-icon-size:     20px !default;
+
+$button-light-bg:                 $light !default;
+$button-light-text:               #444 !default;
+$button-light-border:             #ddd !default;
+$button-light-active-bg:          #fafafa !default;
+$button-light-active-border:      #ccc !default;
+
+$button-dark-bg:                  #f15a2b !default;
+$button-dark-text:                #fff !default;
+$button-dark-border:              #fff !default;
+$button-dark-active-bg:           #47c1b6 !default;
+$button-dark-active-border:       #000 !default;
+
+$button-custom-bg:                #262626 !default;
+$button-custom-text:              #fff !default;
+$button-custom-border:            #fff !default;
+$button-custom-active-bg:         #47c1b6 !default;
+$button-custom-active-border:     #000 !default;
+
+$button-default-bg:               $button-dark-bg !default;
+$button-default-text:             $button-dark-text !default;
+$button-default-border:           $button-dark-border !default;
+$button-default-active-bg:        $button-dark-active-bg !default;
+$button-default-active-border:    $button-dark-active-border !default;
+
+
+// Bars
+// -------------------------------
+
+$bar-height:                      44px !default;
+$bar-title-font-size:             17px !default;
+$bar-padding-portrait:            5px !default;
+$bar-padding-landscape:           5px !default;
+$bar-transparency:                1 !default;
+
+$bar-light-bg:                    rgba($button-light-bg, $bar-transparency) !default;
+$bar-light-text:                  $button-light-text !default;
+$bar-light-border:                $button-light-border !default;
+$bar-light-active-bg:             $button-light-active-bg !default;
+$bar-light-active-border:         $button-light-active-border !default;
+
+$bar-dark-bg:                     rgba(#242424, $bar-transparency) !default;
+$bar-dark-text:                   $button-dark-text !default;
+$bar-dark-border:                 #5f5f5f !default;
+$bar-dark-active-bg:              $button-dark-active-bg !default;
+$bar-dark-active-border:          $button-dark-active-border !default;
+
+$bar-custom-bg:                   rgba($button-dark-bg, $bar-transparency) !default;
+$bar-custom-text:                 $button-dark-text !default;
+$bar-custom-border:               #5f5f5f !default;
+$bar-custom-active-bg:            $button-dark-active-bg !default;
+$bar-custom-active-border:        $button-dark-active-border !default;
+
+$bar-default-bg:                  $bar-dark-bg !default;
+$bar-default-text:                $bar-dark-text !default;
+$bar-default-border:              $bar-dark-border !default;
+$bar-default-active-bg:           $bar-dark-active-bg !default;
+$bar-default-active-border:       $bar-dark-active-border !default;
+
+
+// Tabs
+// -------------------------------
+
+$tabs-height:                     49px !default;
+$tabs-text-font-size:             14px !default;
+$tabs-text-font-size-side-icon:   12px !default;
+$tabs-icon-size:                  32px !default;
+$tabs-badge-padding:              1px 6px !default;
+$tabs-badge-font-size:            12px !default;
+$tabs-text-font-size:             14px !default;
+
+$tabs-light-bg:                   $bar-light-bg !default;
+$tabs-light-border:               $button-light-border !default;
+$tabs-light-text:                 $button-light-text !default;
+
+$tabs-dark-bg:                    $bar-dark-bg !default;
+$tabs-dark-border:                #5f5f5f !default;
+$tabs-dark-text:                  $button-dark-text !default;
+
+$tabs-custom-bg:                  $bar-custom-bg !default;
+$tabs-custom-border:              #5f5f5f !default;
+$tabs-custom-text:                $bar-custom-text !default;
+
+$tabs-default-bg:                 $tabs-dark-bg !default;
+$tabs-default-border:             $tabs-dark-border !default;
+$tabs-default-text:               $tabs-dark-text !default;
+
+$tab-item-max-width:              150px !default;
+
+$tabs-striped-off-color: #000;
+$tabs-striped-off-opacity: 0.4;
+$tabs-striped-border-width: 2px;
+
+
+// Items
+// -------------------------------
+
+$item-font-size:                  16px !default;
+$item-border-width:               1px !default;
+$item-padding:                    16px !default;
+
+$item-button-font-size:           18px !default;
+$item-button-line-height:         32px !default;
+$item-icon-font-size:             32px !default;
+$item-icon-fill-font-size:        28px !default;
+
+$item-icon-accessory-color:       #ccc !default;
+$item-icon-accessory-font-size:   16px !default;
+
+$item-avatar-width:               40px !default;
+$item-avatar-height:              40px !default;
+$item-avatar-border-radius:       4px !default;
+
+$item-thumbnail-width:            76.8px !default;
+$item-thumbnail-height:           102.4px !default;
+$item-thumbnail-margin:           10px !default;
+
+$item-divider-bg:                 #4a4a4a !default;
+$item-divider-color:              #999999 !default;
+$item-divider-padding:            5px 15px !default;
+
+$item-light-bg:                   $button-light-bg !default;
+$item-light-border:               $button-light-border !default;
+$item-light-text:                 $button-light-text !default;
+$item-light-active-bg:            $button-light-active-bg !default;
+$item-light-active-border:        $button-light-active-border !default;
+
+$item-dark-bg:                    #292a2b !default;
+$item-dark-border:                #5f5f5f !default;
+$item-dark-text:                  $button-dark-text !default;
+$item-dark-active-bg:             #47c1b6 !default;
+$item-dark-active-border:         #3e3f3f !default;
+
+$item-custom-bg:                  $item-dark-bg !default;
+$item-custom-border:              $item-dark-border !default;
+$item-custom-text:                $item-dark-text !default;
+$item-custom-active-bg:           #D9D9D9 !default;
+$item-custom-active-border:       $item-light-active-border !default;
+
+$item-default-bg:                 $item-dark-bg !default;
+$item-default-border:             $item-dark-border !default;
+$item-default-text:               $item-dark-text !default;
+$item-default-active-bg:          #D9D9D9 !default;
+$item-default-active-border:      $item-light-active-border !default;
+
+
+// Item Editing
+// -------------------------------
+
+$item-edit-transition-duration:   250ms !default;
+$item-edit-transition-function:   ease-in-out !default;
+
+$item-left-edit-left:             8px !default;  // item's left side edit's "left" property
+
+$item-right-edit-open-width:      50px !default;
+$item-left-edit-open-width:       50px !default;
+
+$item-delete-icon-size:           24px !default;
+$item-delete-icon-color:          red !default;
+
+$item-reorder-icon-size:          32px !default;
+$item-reorder-icon-color:         $dark !default;
+
+
+// Lists
+// -------------------------------
+
+$list-header-bg:                  transparent !default;
+$list-header-color:               #222 !default;
+$list-header-padding:             5px 15px !default;
+$list-header-margin-top:          20px !default;
+
+
+// Cards
+// -------------------------------
+
+$card-header-bg:                  #F5F5F5 !default;
+$card-body-bg:                    #fff !default;
+$card-footer-bg:                  #F5F5F5 !default;
+
+$card-padding:                    10px !default;
+$card-border-width:               1px !default;
+
+$card-border-color:               #ccc !default;
+$card-border-radius:              2px !default;
+
+
+// Forms
+// -------------------------------
+
+$input-height-base:               ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+$input-height-large:              (floor($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+$input-height-small:              (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+
+$input-bg:                        #696969 !default;
+$input-bg-disabled:               #696969 !default;
+
+$input-color:                     $base-color !default;
+$input-border:                    $item-default-border !default;
+$input-border-width:              $item-border-width !default;
+$input-label-color:               $base-color !default;
+$input-color-placeholder:         $dark !default;
+
+
+// Progress
+// -------------------------------
+
+$progress-width:                  100% !default;
+$progress-margin:                 15px auto !default;
+
+
+// Toggle
+// -------------------------------
+
+$toggle-width:                    54px !default;
+$toggle-height:                   32px !default;
+$toggle-border-width:             2px !default;
+$toggle-border-radius:            20px !default;
+
+$toggle-handle-width:             $toggle-height - ($toggle-border-width * 2) !default;
+$toggle-handle-height:            $toggle-handle-width !default;
+$toggle-handle-radius:            $toggle-handle-width !default;
+$toggle-handle-dragging-bg-color: darken(#fff, 5%) !default;
+
+$toggle-off-bg-color:             #E5E5E5 !default;
+$toggle-off-border-color:         #E5E5E5 !default;
+
+$toggle-on-light-bg:              $button-light-border !default;
+$toggle-on-light-border:          $toggle-on-light-bg !default;
+
+$toggle-on-dark-bg:               $dark !default;
+$toggle-on-dark-border:           $toggle-on-dark-bg !default;
+
+$toggle-on-custom-bg:             $dark !default;
+$toggle-on-cusotm-border:         $toggle-on-custom-bg !default;
+
+$toggle-on-default-bg:            $dark !default;
+$toggle-on-default-border:        $toggle-on-default-bg !default;
+
+$toggle-handle-off-bg-color:      $light !default;
+$toggle-handle-on-bg-color:       $toggle-handle-off-bg-color !default;
+
+$toggle-transition-duration:      .2s !default;
+
+$toggle-hit-area-expansion:   5px;
+
+
+// Checkbox
+// -------------------------------
+
+$checkbox-width:                  28px !default;
+$checkbox-height:                 28px !default;
+$checkbox-border-radius:          $checkbox-width !default;
+$checkbox-border-width:           1px !default;
+
+$checkbox-off-bg-color:           #fff !default;
+$checkbox-off-border-light:       $button-light-border !default;
+$checkbox-on-bg-light:            $button-light-border !default;
+
+$checkbox-off-border-dark:        $dark !default;
+$checkbox-on-bg-dark:             $dark !default;
+
+$checkbox-off-border-custom:      $button-custom-border !default;
+$checkbox-on-bg-custom:           $button-custom-border !default;
+
+$checkbox-off-border-default:     $button-dark-border !default;
+$checkbox-on-bg-default:          $button-dark-border !default;
+
+$checkbox-check-width:            3px !default;
+$checkbox-check-color:            #fff !default;
+
+
+// Range
+// -------------------------------
+
+$range-track-height:              4px !default;
+$range-slider-width:              20px !default;
+$range-slider-height:             20px !default;
+$range-slider-border-radius:      10px !default;
+$range-icon-size:                 24px !default;
+
+$range-light-track-bg:            $button-light-border !default;
+$range-dark-track-bg:             $button-dark-bg !default;
+$range-custom-track-bg:           $button-custom-bg !default;
+$range-default-track-bg:          #ccc !default;
+
+
+// Menus
+// -------------------------------
+
+$menu-bg:                         #fff !default;
+$menu-width:                      275px !default;
+$menu-animation-speed:            200ms !default;
+
+$menu-side-shadow:                -1px 0px 2px rgba(0, 0, 0, 0.2), 1px 0px 2px rgba(0,0,0,0.2) !default;
+
+$split-pane-menu-width:           320px !default;
+$split-pane-menu-border-color:    #eee !default;
+
+
+// Modals
+// -------------------------------
+
+$modal-bg-color:                  $base-background-color !default;
+$modal-backdrop-bg-active:        rgba(0,0,0,0.5) !default;
+$modal-backdrop-bg-inactive:      rgba(0,0,0,0) !default;
+
+$modal-inset-mode-break-point:    680px !default;  // @media min-width
+$modal-inset-mode-top:            20% !default;
+$modal-inset-mode-right:          20% !default;
+$modal-inset-mode-bottom:         20% !default;
+$modal-inset-mode-left:           20% !default;
+$modal-inset-mode-min-height:     240px !default;
+
+//Custom
+$modal-details-label-text:			  #868686 !default;
+
+
+// Popovers
+// -------------------------------
+
+$popover-bg-color:                $light !default;
+$popover-backdrop-bg-active:      rgba(0,0,0,0.1) !default;
+$popover-backdrop-bg-inactive:    rgba(0,0,0,0) !default;
+$popover-width:                   220px !default;
+$popover-height:                  280px !default;
+$popover-large-break-point:       680px !default;
+$popover-large-width:             360px !default;
+
+$popover-box-shadow:              0 1px 3px rgba(0,0,0,0.4) !default;
+$popover-border-radius:           2px !default;
+
+$popover-box-shadow-ios:          0 0 40px rgba(0,0,0,0.08) !default;
+$popover-border-radius-ios:       10px !default;
+
+$popover-bg-color-android:        #fafafa !default;
+$popover-box-shadow-android:      0 2px 6px rgba(0,0,0,0.35) !default;
+
+
+// Grids
+// -------------------------------
+
+$grid-padding-width:              10px !default;
+$grid-responsive-sm-break:        567px !default;  // smaller than landscape phone
+$grid-responsive-md-break:        767px !default;  // smaller than portrait tablet
+$grid-responsive-lg-break:        1023px !default; // smaller than landscape tablet
+
+
+// Action Sheets
+// -------------------------------
+
+$sheet-bg-color:                  rgba(255, 255, 255, 0.6) !default;
+$sheet-opacity:                   0.95 !default;
+
+$sheet-border-radius:             3px 3px 3px 3px !default;
+$sheet-border-radius-top:         3px 3px 0px 0px !default;
+$sheet-border-radius-bottom:      0px 0px 3px 3px !default;
+
+
+// Popups
+// -------------------------------
+
+$popup-width:                     250px !default;
+$popup-enter-animation:           superScaleIn !default;
+$popup-enter-animation-duration:  0.2s !default;
+$popup-leave-animation-duration:  0.1s !default;
+
+$popup-border-radius:             0px !default;
+$popup-background-color:          rgba(255,255,255,0.9) !default;
+
+$popup-button-border-radius:      2px !default;
+$popup-button-line-height:        20px !default;
+$popup-button-min-height:         45px !default;
+
+
+// Loading
+// -------------------------------
+
+$loading-text-color:              #fff !default;
+$loading-bg-color:                rgba(0,0,0,0.7) !default;
+$loading-padding:                 20px !default;
+$loading-border-radius:           5px !default;
+$loading-font-size:               15px !default;
+
+$loading-backdrop-fadein-duration:0.3s !default;
+$loading-backdrop-bg-color:       rgba(0,0,0,0.7) !default;
+
+
+// Badges
+// -------------------------------
+
+$badge-font-size:                 14px !default;
+$badge-line-height:               16px !default;
+$badge-font-weight:               bold !default;
+$badge-border-radius:             10px !default;
+
+$badge-light-bg:                  $button-light-bg !default;
+$badge-light-text:                $button-light-text !default;
+
+$badge-dark-bg:                   $button-dark-bg !default;
+$badge-dark-text:                 $button-dark-text !default;
+
+$badge-default-bg:                transparent !default;
+$badge-default-text:              #AAAAAA !default;
+
+
+// Z-Indexes
+// -------------------------------
+
+$z-index-action-sheet:            11 !default;
+$z-index-badge:                   1 !default;
+$z-index-backdrop:                11 !default;
+$z-index-bar:                     10 !default;
+$z-index-bar-title:               0 !default;
+$z-index-bar-button:              1 !default;
+$z-index-item:                    2 !default;
+$z-index-item-reorder:            3 !default;
+$z-index-item-checkbox:           3 !default;
+$z-index-item-drag:               0 !default;
+$z-index-item-edit:               0 !default;
+$z-index-item-options:            1 !default;
+$z-index-item-radio:              3 !default;
+$z-index-item-reordering:         9 !default;
+$z-index-item-toggle:             3 !default;
+$z-index-loading:                 13 !default;
+$z-index-menu:                    0 !default;
+$z-index-menu-bar-header:         11 !default;
+$z-index-menu-scroll-content:     10 !default;
+$z-index-modal:                   10 !default;
+$z-index-pane:                    1 !default;
+$z-index-popup:                   12 !default;
+$z-index-popover:                 10 !default;
+$z-index-scroll-bar:              9999 !default;
+$z-index-scroll-content-false:    11 !default;
+$z-index-slider-pager:            1 !default;
+$z-index-tabs:                    5 !default;
+$z-index-view:                    1 !default;
+
+
+// Platform
+// -------------------------------
+
+$ios-statusbar-height:           20px !default;
